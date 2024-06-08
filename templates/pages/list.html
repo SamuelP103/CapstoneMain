@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="list">
+
+    <div>
+        <a href="{% url 'create' %}" class="btn btn-primary">Create Post</a>
+    </div>
+<br>
+    <div>
+        
+        <form method="get" action="{% url 'list' %}">
+            <label for="word">Sort by Category:</label>
+            <select name="word" id="word">
+                <option value="">--Select a Category--</option>
+                {% for word in specific_words %}
+                    <option value="{{ word }}" {% if request.GET.word == word %}selected{% endif %}>{{ word }}</option>
+                {% endfor %}
+            </select>
+            
+            <button type="submit">Sort</button>
+        </form>
+    </div>
+    <br>
+
+    <div class="postBox">
+        {% for record in posts %}
+        <div class="record">
+            <h2><a  class="purpleLink" href="{% url 'detail' record.id %}">{{ record.title }}</a></h2>
+            <p class="black">{{ record.content }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+{% endblock content %}

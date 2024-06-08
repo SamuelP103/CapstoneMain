@@ -1,0 +1,64 @@
+:root{
+    --primary-color: #9ff2ff;
+    --primary-color-100: #D5CCFF;
+    --primary-color-300: #7F66FF;
+    
+    --secondary-color: #024a58;
+    --secondary-color-600: #6604c8;
+    --secondary-color-900: #012b32;
+
+    --neutral-color: #e0e0e0;
+
+    --background-color: #1B1B1B;
+
+    --surface-color: #96969655;
+
+    --lobster-font: "Lobster", sans-serif;
+    --sans-font: "DM Sans", sans-serif;
+
+
+}
+
+.create {
+    background-color: #6c6c6c;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 6px;
+}
+
+.create h1 {
+    margin-bottom: 20px;
+}
+
+.create form {
+    margin-bottom: 20px;
+}
+
+.create label {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.create input[type="text"],
+.create textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgb(223, 223, 223);
+}
+
+.create button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #414141;
+    color: #e2e2e2;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.create button[type="submit"]:hover {
+    background-color: #23272b;
+}

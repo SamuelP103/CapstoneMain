@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="detail">
+    <div>
+        <a href="{% url 'list' %}" class="btn btn-primary">Back to Posts</a>
+    </div>
+
+
+    <h1>{{ post.title }}</h1>
+    <label>{{ post.created }}</label>
+
+        <p class="black">
+            {{post.content}}
+        </p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>       
+
+{% endblock content %}

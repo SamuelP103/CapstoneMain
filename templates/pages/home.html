@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}  
+<div class="cellPhone">
+    <section class="about-section center-row">
+        <div class="about-image-container center-row">
+            <img src="{% static 'img/Dragon1.jpeg' %}" style="width:1000%;">
+
+        </div>
+        <div class="about-description-container center-column">
+
+        <h1>About the Tool</h1>
+        
+        <p>
+          As a dedicated web application tester, I meticulously navigate through every nook 
+          and cranny of digital interfaces, ensuring seamless user experiences. My keen eye for 
+          detail allows me to pinpoint even the most elusive bugs, ensuring that the applications 
+          I test are robust and reliable. Through rigorous testing protocols, I contribute to the 
+          enhancement of web applications, fostering trust and satisfaction among users.
+            <br><br>
+            With my expertise, I not only detect existing flaws but also anticipate potential issues,
+            devising preemptive strategies to fortify the integrity of web applications. My role 
+            extends beyond mere testing; I collaborate closely with developers, providing valuable
+              feedback and insights to refine and optimize the functionality of web interfaces. My
+              commitment to excellence in web application testing cultivates a digital landscape
+                where reliability and user satisfaction reign supreme.
+        </p>
+        </div>
+</div>
+</body>
+
+{% endblock content %}

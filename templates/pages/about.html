@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="cellPhone">
+    <section class="about-section center-row">
+        <div class="about-image-container center-row">
+            <img src="{% static 'img/dragon3.jpeg' %}" style="width:700%;">
+        </div>
+        <div class="about-description-container center-column">
+
+        <h1>Contact Us</h1>
+        
+        <p>
+          Phone number: 392-3912-3940<br>
+          Fax: 391-498-2344<br>
+          Email: InfoSecTool@gmail.com
+            <br><br>
+            "With this innovative information security tool in our arsenal, we're 
+            poised to embrace the future with confidence and determination. Its robust 
+            features and capabilities not only safeguard our digital assets but also empower 
+            us to navigate the evolving landscape of cyber threats with agility and resilience. 
+            As we embark on this journey, we are filled with optimism and excitement, knowing that 
+            we have the tools necessary to protect our interests and forge ahead into a brighter, 
+            more secure tomorrow." - John Smith(Co-Owner of InfoTool)
+        </p>
+        </div>
+</div>
+
+
+{% endblock content %}
