@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 1067px) {
 .center-row {
     display: flex;
       flex-direction: column-reverse;
@@ -48,7 +48,7 @@ h1 {
     text-transform: uppercase;
     font-size: 2rem;
 }
-@media (max-width: 767px){
+@media (max-width: 1067px){
 h1 {
     color: var(--secondary-color-600);
     text-transform: uppercase;
@@ -162,7 +162,7 @@ footer {
 footer h2{
     padding-top: 3%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1067px) {
 footer {
     margin-top: 0%;
     padding: 0%;
@@ -173,32 +173,48 @@ footer {
     height: 300px;
 }}
 img {
-    width: 150%;
-    margin-right: -100%;
+    width: 200% !important;
+    margin-right: -110%;
     margin-bottom: -300%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1967px) {
 img {
-    width: 200%;
+    width: 200% !important;
+    margin-left: 40%;
+    margin-top: 0%;
+    margin-bottom: -300%;
+   
+}}
+@media (max-width: 1467px) {
+img {
+    width: 300% !important;
+    margin-left: 85%;
+    margin-top: 0%;
+    margin-bottom: -300%;
+   
+}}
+@media (max-width: 1067px) {
+img {
+    width: 200% !important;
     margin-left: -85%;
     margin-top: 40%;
     margin-bottom: -40%;
    
 }}
 
-@media (max-width: 767px) {
+@media (max-width: 1067px) {
     .cellPhone {
       
       align-items: center; 
     }
   }
-@media (max-width: 767px) {
+@media (max-width: 1067px) {
     header {
       margin-bottom: 15%;
        
     }
   }
-@media (max-width: 767px) {
+@media (max-width: 1067px) {
     .nav-link {
         display: flex;
         flex-direction: row;
@@ -207,17 +223,17 @@ img {
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1067px) {
     .name {
       display: none;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 1067px) {
     .nav-link a {
         color: var(--neutral-color);
         font-size: 1rem;
         text-transform: uppercase;
-        margin: 2% 1%; /* Adjust the margin values as needed */
+        margin: 2% 1%; 
         padding: 1% 10%;
         font-weight: 600;
     }

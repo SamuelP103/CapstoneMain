@@ -6,15 +6,15 @@
     <div>
         <a href="{% url 'create' %}" class="btn btn-primary">Create Post</a>
     </div>
-<br>
+    <br>
     <div>
         
         <form method="get" action="{% url 'list' %}">
             <label for="word">Sort by Category:</label>
             <select name="word" id="word">
                 <option value="">--Select a Category--</option>
-                {% for word in specific_words %}
-                    <option value="{{ word }}" {% if request.GET.word == word %}selected{% endif %}>{{ word }}</option>
+                {% for word, count in specific_words.items %}
+                    <option value="{{ word }}" {% if request.GET.word == word %}selected{% endif %}>{{ word }} ({{ count|add:"-1" }})</option>
                 {% endfor %}
             </select>
             
@@ -33,31 +33,6 @@
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
