@@ -7,6 +7,7 @@ from .forms import CreateForm
 from django.db.models import Count, Q
 
 
+
 class HomePageView(TemplateView):
     template_name = "pages/home.html"
     
@@ -42,11 +43,12 @@ class ListPosts(ListView):
         for post in posts:
             all_words_count.update(post.content.lower().split())
 
+
         specific_words = [
-            "APT", "IoT security", "Silk Road", "breach", "attack",
-            "cybersecurity", "dark web", "exploit", "incident response", "leak",
-            "lost", "malware", "patch", "phishing", "ransomware", "regulation compliance",
-            "social engineering", "threat actor", "tor",
+            "Silk Road", "breach", "attack",
+            "cybersecurity", "dark web", "darknet", "exploit", "incident", "leak",
+            "missing", "malware", "onion", "patch", "phishing", "ransomware",
+            "social engineering",
             "vulnerability", "zero-day"
         ]
 
@@ -58,13 +60,14 @@ class ListPosts(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
+
         specific_word_counts = {}
         for word, count in self.specific_words.items():
             specific_word_counts[word] = self.get_queryset().filter(content__icontains=word.lower()).count()
 
-        
+
         selected_word = self.request.GET.get('word', '')
-        if selected_word and specific_word_counts[selected_word] == 1:
+        if selected_word and specific_word_counts.get(selected_word) == 1:
             specific_word_counts[selected_word] += 1
 
         context['specific_words'] = specific_word_counts
@@ -79,3 +82,10 @@ class ListPosts(ListView):
 
         context[self.context_object_name] = sorted_posts
         return context
+
+
+
+
+
+
+
