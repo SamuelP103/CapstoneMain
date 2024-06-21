@@ -59,20 +59,15 @@ class ListPosts(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
-
         specific_word_counts = {}
         for word, count in self.specific_words.items():
             specific_word_counts[word] = self.get_queryset().filter(content__icontains=word.lower()).count()
 
 
-        selected_word = self.request.GET.get('word', '')
-        if selected_word and specific_word_counts.get(selected_word) == 1:
-            specific_word_counts[selected_word] += 1
-
         context['specific_words'] = specific_word_counts
 
-        
+
+        selected_word = self.request.GET.get('word', '')
         sorted_posts = self.get_queryset()
         if selected_word:
             query = Q()

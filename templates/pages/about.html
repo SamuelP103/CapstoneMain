@@ -1,32 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home{% endblock title %}
+{% block title %}About Us{% endblock title %}
 
 {% block content %}
-<div class="cellPhone">
-    <section class="about-section center-row">
-        <div class="about-image-container center-row">
-            <img src="{% static 'img/dragon3.jpeg' %}" style="width:700%;">
+<div class="about-page">
+    <section class="about-section">
+        <div class="about-image-container">
+            <img src="{% static 'img/dragon3.jpeg' %}" alt="Dragon Image" class="about-image">
         </div>
-        <div class="about-description-container center-column">
+        <div class="about-description-container">
+            <h1 class="section-title">About InfoSecTool</h1>
+            <p>
+                Welcome to InfoSecTool, your partner in digital security. We specialize in providing cutting-edge solutions to safeguard your digital assets from cyber threats. With years of expertise, our team is committed to delivering robust security tools that empower businesses to thrive in a secure digital environment.
+            </p>
+            <p>
+                <strong>Contact Us:</strong><br>
+                <span class="contact-info">Phone: 392-3912-3940</span><br>
+                <span class="contact-info">Fax: 391-498-2344</span><br>
+                <span class="contact-info">Email: infosectool@gmail.com</span>
+            </p>
+            <p>
+                Our mission is to innovate and adapt to the ever-changing landscape of cybersecurity, ensuring our clients stay ahead of potential risks. Whether you're a small startup or a large enterprise, we tailor our solutions to fit your unique security needs, providing peace of mind so you can focus on what matters most – your business.
+            </p>
+            <blockquote class="blockquote">
+                "With our innovative information security tool, we're equipped to navigate the future with confidence. Its advanced features not only protect our digital assets but also empower us to tackle cyber threats with agility and resilience."
+                <p class="blockquote-footer">- John Smith, Co-Owner of InfoSecTool</p>
+            </blockquote>
+        </div>
+    </section>
 
-        <h1>Contact Us</h1>
-        
-        <p>
-          Phone number: 392-3912-3940<br>
-          Fax: 391-498-2344<br>
-          Email: InfoSecTool@gmail.com
-            <br><br>
-            "With this innovative information security tool in our arsenal, we're 
-            poised to embrace the future with confidence and determination. Its robust 
-            features and capabilities not only safeguard our digital assets but also empower 
-            us to navigate the evolving landscape of cyber threats with agility and resilience. 
-            As we embark on this journey, we are filled with optimism and excitement, knowing that 
-            we have the tools necessary to protect our interests and forge ahead into a brighter, 
-            more secure tomorrow." - John Smith(Co-Owner of InfoTool)
-        </p>
+
+    <section class="team-section">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-member">
+            <img src="{% static 'img/dragon3.jpeg' %}" alt="Team Member 1" class="team-member-image">
+            <div class="team-member-info">
+                <h3 class="team-member-name">Jane Doe</h3>
+                <p class="team-member-role">Chief Technology Officer</p>
+                <p class="team-member-bio">With over 15 years of experience in cybersecurity, Jane leads our team in developing innovative solutions.</p>
+            </div>
         </div>
+        <div class="team-member">
+            <img src="{% static 'img/dragon3.jpeg' %}" alt="Team Member 2" class="team-member-image">
+            <div class="team-member-info">
+                <h3 class="team-member-name">Michael Brown</h3>
+                <p class="team-member-role">Lead Software Engineer</p>
+                <p class="team-member-bio">Michael spearheads the development of our flagship security tool, ensuring it meets the highest standards.</p>
+            </div>
+        </div>
+    </section>
 </div>
-
-
 {% endblock content %}
